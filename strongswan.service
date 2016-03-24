@@ -8,7 +8,7 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill strongswan
 ExecStartPre=-/usr/bin/docker rm strongswan
 #ExecStartPre=/usr/bin/docker pull strongswan
-ExecStart=/usr/bin/docker run --name=strongswan --privileged=true --net=host --cap-add=ALL -v /lib/modules:/lib/modules -v /data/strongswan/ipsec.conf:/etc/ipsec.conf -v /data/strongswan/ipsec.d:/etc/ipsec.d -v /data/strongswan/ipsec.secrets:/etc/ipsec.secrets -v /data/strongswan/strongswan.conf:/etc/strongswan.conf -v /data/strongswan/strongswan.d:/etc/strongswan.d houselabs/strongswan
+ExecStart=/usr/bin/docker run --name=strongswan --privileged=true --net=host --cap-add=ALL -e VPN_SUBNET=192.168.2.0/24 -v /lib/modules:/lib/modules -v /data/strongswan/ipsec.conf:/etc/ipsec.conf -v /data/strongswan/ipsec.d:/etc/ipsec.d -v /data/strongswan/ipsec.secrets:/etc/ipsec.secrets -v /data/strongswan/strongswan.conf:/etc/strongswan.conf -v /data/strongswan/strongswan.d:/etc/strongswan.d houselabs/strongswan
 ExecStop=/usr/bin/docker stop strongswan
 
 [Install]
