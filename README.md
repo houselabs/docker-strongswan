@@ -10,6 +10,7 @@ docker run -i -v /data/strongswan:/data \
   -e VPN_PSK=sdasdas \
   -e VPN_USERNAME=ohsc \
   -e VPN_PASSWORD=pppsssswwwddd \
+  -e VPN_P12_PASSWORD=lock \
   houselabs/strongswan-buildconf
 ```
 
@@ -35,4 +36,4 @@ docker run --name=strongswan \
 ```
 Or you may also use the systemd unit file.
 
-Finally, all certs for client are generated in /data/strongswan/ssl. You may copy them to your client. And a mobileconfig template for iOS/Mac is provided. Modify the certs and vpn domain first before use the mobileconfig file.
+Finally, all certs for client are generated in /data/strongswan/ssl. You may copy them to your client. And a mobileconfig for iOS/Mac is generated. You can install to your iOS / Mac directly.
