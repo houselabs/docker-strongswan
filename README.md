@@ -20,7 +20,7 @@ Then run the strongswan
 
 ```bash
 docker pull houselabs/strongswan
-docker run --name=strongswan \
+docker run -d --name=strongswan \
   --privileged=true \
   --net=host \
   --cap-add=ALL \
