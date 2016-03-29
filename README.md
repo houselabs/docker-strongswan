@@ -34,6 +34,19 @@ docker run -d --name=strongswan \
   houselabs/strongswan
 
 ```
+
+To inspect strongSwan daemon logs:
+
+```bash
+docker exec -it strongswan bash
+```
+
+and inside the container:
+
+```bash
+tail -f /var/log/charon.log
+```
+
 Or you may also use the systemd unit file.
 
 Finally, all certs for client are generated in /data/strongswan/ssl. You may copy them to your client. And a mobileconfig for iOS/Mac is generated. You can install to your iOS / Mac directly.
