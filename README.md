@@ -32,7 +32,9 @@ docker run -d --name=strongswan \
   -v /data/strongswan/strongswan.conf:/etc/strongswan.conf \
   -v /data/strongswan/strongswan.d:/etc/strongswan.d \
   -v /data/strongswan/log/charon.log:/var/log/charon.log \
+  -v /etc/localtime:/etc/localtime \
   houselabs/strongswan
+
 
 ```
 
