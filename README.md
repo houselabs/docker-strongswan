@@ -24,7 +24,7 @@ docker run -d --name=strongswan \
   --privileged=true \
   --net=host \
   --cap-add=ALL \
-  -e VPN_SUBNET=192.168.2.0/24 \
+  -e VPN_SUBNET=192.168.1.0/24 \
   -v /lib/modules:/lib/modules \
   -v /data/strongswan/ipsec.conf:/etc/ipsec.conf \
   -v /data/strongswan/ipsec.d:/etc/ipsec.d \
