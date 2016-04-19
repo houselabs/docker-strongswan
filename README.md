@@ -50,6 +50,6 @@ and inside the container:
 tail -f /var/log/charon.log
 ```
 
-Or you may also use the systemd unit file.
+Or you may also use the systemd unit file `strongswan.service`. Remember modify the `VPN_SUBNET` value in the unit file before start.
 
 Finally, all certs for client are generated in /data/strongswan/ssl. You may copy them to your client. And a mobileconfig for iOS/Mac is generated. You can install to your iOS / Mac directly.
