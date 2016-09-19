@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/houselabs/strongswan.svg)](https://microbadger.com/images/houselabs/strongswan "Get your own image badge on microbadger.com")
+
 ## Usage
 First use [houselabs/strongswan-buildconf](https://github.com/houselabs/docker-strongswan-buildconf) to build config files
 
